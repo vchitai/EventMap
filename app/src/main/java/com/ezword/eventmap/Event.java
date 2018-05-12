@@ -1,41 +1,43 @@
 package com.ezword.eventmap;
 
-import android.location.Location;
-
 import com.google.android.gms.maps.model.LatLng;
 
-/**
- * Created by chita on 12/05/2018.
- */
-
 public class Event {
-    private String mThumbnailImage;
-    private String mTitle;
-    private String mDescription;
-    private LatLng mLocation;
-    private String mHostPhone;
+    private String location;
+    private String title;
+    private String eventId;
+    private String poster;
+    private String desc;
+    private String hostId;
 
-    public Event(String title, String desc, String thumbnail, LatLng location) {
-        mThumbnailImage = thumbnail;
-        mTitle = title;
-        mDescription = desc;
-        mLocation = location;
+    public Event() {
+
     }
 
-    public String getThumbnailImage() {
-        return mThumbnailImage;
+    public String getPoster() {
+        return poster;
     }
     public String getTitle() {
-        return mTitle;
+        return title;
     }
-    public String getDescription() {
-        return mDescription;
-    }
-    public LatLng getLocation() {
-        return mLocation;
-    }
-    public String getHostPhone() {
-        return mHostPhone;
+    public String getDesc() {
+        return desc;
     }
 
+    public String getLocation() {
+        return location;
+    }
+
+    public LatLng getLocationLatLng() {
+        String[] latLng = location.split(",");
+        return new LatLng(Double.parseDouble(latLng[0]), Double.parseDouble(latLng[1]));
+    }
+
+    public String getEventId() {
+        return eventId;
+    }
+
+    public String getHostId() {
+        return hostId;
+    }
 }

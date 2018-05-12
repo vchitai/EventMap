@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1046667712352",
+    "firebase_url": "https://eventmap-d6920.firebaseio.com",
+    "project_id": "eventmap-d6920",
+    "storage_bucket": "eventmap-d6920.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1046667712352:android:4363e59193348f80",
+        "android_client_info": {
+          "package_name": "com.ezword.eventmap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1046667712352-bsq9b6fphf38olnbus706786q05evcu2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBANgf5NFvC1MAte30uxwcGHH_kLjP3SoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

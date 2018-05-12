@@ -35,12 +35,13 @@ public class CustomInfoWindowAdapter implements GoogleMap.InfoWindowAdapter {
     @Override
     public View getInfoContents(Marker marker) {
         View parentView = inflater.inflate(R.layout.map_info_window, null);
-        final Event event = (Event) marker.getTag();
         ImageView infoImage = parentView.findViewById(R.id.map_info_image);
         TextView infoTitle = parentView.findViewById(R.id.map_info_title);
-        infoTitle.setText(event.getTitle());
         TextView infoDesc = parentView.findViewById(R.id.map_info_desc);
-        infoTitle.setText(event.getDescription());
+        final Event event = (Event) marker.getTag();
+        assert event != null;
+        infoTitle.setText(event.getTitle());
+        infoDesc.setText(event.getDesc());
         return parentView;
     }
 }

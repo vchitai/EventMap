@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">EventMap</string>
     <string name="title_activity_maps">Map</string>
+    <string name="description">Description</string>
+    <string name="title">Title</string>
+    <string name="view_detail">View Detail</string>
 </resources>
