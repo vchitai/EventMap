@@ -2,10 +2,14 @@ package com.ezword.eventmap;
 
 import com.google.android.gms.maps.model.LatLng;
 
-public class Event {
-    private String location;
-    private String title;
+import java.io.Serializable;
+
+public class Event implements Serializable{
     private String eventId;
+    private String title;
+    private String location;
+    private String address;
+    private String date;
     private String poster;
     private String desc;
     private String hostId;
@@ -39,5 +43,13 @@ public class Event {
 
     public String getHostId() {
         return hostId;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getDate() {
+        return date;
     }
 }

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/map_info_date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+        android:text="Ngày diễn ra: "
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/map_info_date"
+        app:layout_constraintBottom_toTopOf="@id/map_info_address_label"/>
+
+    <TextView
+        android:id="@+id/map_info_date"
+        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Start Date"
+        android:singleLine="false"
+        app:layout_constraintBottom_toTopOf="@id/map_info_address"
+        app:layout_constraintLeft_toRightOf="@id/map_info_date_label"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/map_info_address_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+        android:text="Địa điểm: "
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/map_info_address"
+        app:layout_constraintTop_toBottomOf="@id/map_info_date_label"/>
+    <TextView
+        android:id="@+id/map_info_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+        android:text="Start Date"
+        android:padding="8dp"
+        android:singleLine="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/map_info_address_label"
+        app:layout_constraintTop_toBottomOf="@id/map_info_date"/>
+</android.support.constraint.ConstraintLayout>

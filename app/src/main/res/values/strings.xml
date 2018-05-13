@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">EventMap</string>
-    <string name="title_activity_maps">Map</string>
-    <string name="description">Description</string>
-    <string name="title">Title</string>
-    <string name="view_detail">View Detail</string>
+    <string name="title_activity_maps">Bản đồ</string>
+    <string name="description">Mô tả sự kiện</string>
+    <string name="title">Tên sự kiện</string>
+    <string name="view_detail">Xem chi tiết sự kiện >>></string>
+    <string name="poster">Poster</string>
+    <string name="hosts">Đơn vị tổ chức</string>
+    <string name="host_logo">hostLogo</string>
+    <string name="host_name">Host Name</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_closed">Closed</string>
 </resources>

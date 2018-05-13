@@ -10,13 +10,14 @@
 
     <ImageView
         android:id="@+id/map_info_image"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/bg"
         android:padding="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/map_info_title"/>
 
     <TextView
         android:id="@+id/map_info_title"
@@ -24,7 +25,10 @@
         android:layout_height="wrap_content"
         android:text="@string/title"
         android:padding="8dp"
-        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+        android:maxWidth="400dp"
+        android:maxLines="1"
+        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+        android:textColor="@android:color/black"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/map_info_image" />
@@ -35,19 +39,47 @@
         android:layout_height="wrap_content"
         android:text="@string/description"
         android:padding="8dp"
-        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+        android:maxLines="2"
+        android:maxWidth="400dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:textAlignment="textStart"
         app:layout_constraintTop_toBottomOf="@+id/map_info_title" />
 
-    <Button
+    <android.support.v7.widget.CardView
+        android:id="@+id/host_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/map_info_desc"
+        app:layout_constraintLeft_toLeftOf="parent">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/host_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Đơn vị tổ chức"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="8dp"
+            app:layout_constraintLeft_toRightOf="@id/host_name_label"
+            android:src="@drawable/logo"/>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+    <TextView
         android:id="@+id/map_info_detail"
-        style="@style/Base.TextAppearance.AppCompat.Widget.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/view_detail"
-        android:background="@android:color/holo_blue_light"
+        android:layout_margin="8dp"
+        android:padding="8dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/map_info_desc" />
+        app:layout_constraintTop_toBottomOf="@+id/host_logo" />
 </android.support.constraint.ConstraintLayout>

@@ -1,6 +1,8 @@
 package com.ezword.eventmap;
 
-public class Host {
+import java.io.Serializable;
+
+public class Host implements Serializable {
     private String hostId;
     private String name;
     private String logo;
