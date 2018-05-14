@@ -1,10 +1,10 @@
-package com.ezword.eventmap;
+package com.ezword.eventmap.cores;
 
 import com.google.android.gms.maps.model.LatLng;
 
 import java.io.Serializable;
 
-public class Event implements Serializable{
+public class Event implements Serializable {
     private String eventId;
     private String title;
     private String location;
@@ -21,9 +21,11 @@ public class Event implements Serializable{
     public String getPoster() {
         return poster;
     }
+
     public String getTitle() {
         return title;
     }
+
     public String getDesc() {
         return desc;
     }

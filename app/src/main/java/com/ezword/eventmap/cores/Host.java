@@ -1,4 +1,4 @@
-package com.ezword.eventmap;
+package com.ezword.eventmap.cores;
 
 import java.io.Serializable;
 
@@ -17,18 +17,23 @@ public class Host implements Serializable {
     public String getHostId() {
         return hostId;
     }
+
     public String getName() {
         return name;
     }
+
     public String getLink() {
         return link;
     }
+
     public String getEmail() {
         return email;
     }
+
     public String getPhone() {
         return phone;
     }
+
     public String getLogo() {
         return logo;
     }

@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="CardView" parent="CardView">
+        <item name="cardBackgroundColor">@color/colorPrimary</item>
+    </style>
+
 </resources>

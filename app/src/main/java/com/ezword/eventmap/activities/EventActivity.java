@@ -1,22 +1,21 @@
-package com.ezword.eventmap;
+package com.ezword.eventmap.activities;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ezword.eventmap.R;
+import com.ezword.eventmap.cores.Event;
+import com.ezword.eventmap.cores.FavoritesList;
+import com.ezword.eventmap.cores.Host;
 import com.squareup.picasso.Picasso;
-
-import org.w3c.dom.Text;
 
 public class EventActivity extends AppCompatActivity {
 
@@ -33,7 +32,7 @@ public class EventActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.map_info_address)).setText(event.getAddress());
         ((TextView) findViewById(R.id.host_name)).setText(host.getName());
         ((TextView) findViewById(R.id.host_desc)).setText(host.getLink());
-        Picasso.get().load(event.getPoster()).into((ImageView)findViewById(R.id.map_info_image));
+        Picasso.get().load(event.getPoster()).into((ImageView) findViewById(R.id.map_info_image));
         findViewById(R.id.host_phone_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,7 +64,7 @@ public class EventActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.event_fab).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FavoritesList favoritesList = FavoritesList.getInstance(getApplicationContext());
@@ -73,8 +72,7 @@ public class EventActivity extends AppCompatActivity {
                 if (id == -1) {
                     favoritesList.addFavorites(event.getEventId());
                     Toast.makeText(getApplicationContext(), "Favorite List added", Toast.LENGTH_SHORT).show();
-                }
-                else {
+                } else {
                     favoritesList.removeFavorites(id);
                     Toast.makeText(getApplicationContext(), "Favorite List removed", Toast.LENGTH_SHORT).show();
                 }

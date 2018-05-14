@@ -5,9 +5,21 @@
     <string name="title">Tên sự kiện</string>
     <string name="view_detail">Xem chi tiết sự kiện >>></string>
     <string name="poster">Poster</string>
-    <string name="hosts">Đơn vị tổ chức</string>
     <string name="host_logo">hostLogo</string>
     <string name="host_name">Host Name</string>
     <string name="navigation_drawer_open">Open</string>
     <string name="navigation_drawer_closed">Closed</string>
+    <string name="start_date">Ngày diễn ra:</string>
+    <string name="map_info_date_holder">Start Date</string>
+    <string name="hold_location">Địa điểm:</string>
+    <string name="map_info_address_holder">Địa điểm</string>
+    <string name="event_name">Tên sự kiện</string>
+    <string name="event_desc">Mô tả sự kiện</string>
+    <string name="host_information">Thông tin về đơn vị tổ chức</string>
+    <string name="host_phone_button">host_phone_button</string>
+    <string name="host_email_button">Host Email Button</string>
+    <string name="host_link_button">Host Link Button</string>
+    <string name="map_info_window_image">Map Info Window Image</string>
+    <string name="hosts">Đơn vị tổ chức</string>
+    <string name="favorite_event">Sự kiện bạn quan tâm</string>
 </resources>

@@ -32,7 +32,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name=".activities.MapsActivity"
             android:label="@string/title_activity_maps">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,8 +40,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EventActivity"
-            android:parentActivityName=".MapsActivity">
+        <activity
+            android:name=".activities.EventActivity"
+            android:parentActivityName=".activities.MapsActivity">
 
         </activity>
     </application>

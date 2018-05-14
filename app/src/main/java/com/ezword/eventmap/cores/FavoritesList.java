@@ -1,17 +1,17 @@
-package com.ezword.eventmap;
+package com.ezword.eventmap.cores;
 
 import android.content.Context;
 
 import java.util.ArrayList;
 
-/**
- * Created by chita on 13/05/2018.
- */
-
 public class FavoritesList {
     private static FavoritesList mInstance = null;
     private static TinyDB mTinyDB = null;
     private static ArrayList<String> mFavourites;
+
+    private FavoritesList() {
+        refreshFavouritesList();
+    }
 
     public static FavoritesList getInstance(Context context) {
         if (mInstance == null) {
@@ -19,10 +19,6 @@ public class FavoritesList {
             mInstance = new FavoritesList();
         }
         return mInstance;
-    }
-
-    private FavoritesList() {
-        refreshFavouritesList();
     }
 
     private void refreshFavouritesList() {
@@ -35,7 +31,7 @@ public class FavoritesList {
 
     public int isExist(String favorite) {
         int id = -1;
-        for (int i = 0; i< mFavourites.size(); i++) {
+        for (int i = 0; i < mFavourites.size(); i++) {
             if (mFavourites.get(i).equals(favorite)) {
                 id = i;
                 break;
@@ -44,6 +40,7 @@ public class FavoritesList {
 
         return id;
     }
+
     public void addFavorites(String newFavorite) {
         mFavourites.add(newFavorite);
         storeFavouritesList();

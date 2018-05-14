@@ -1,16 +1,15 @@
-package com.ezword.eventmap;
+package com.ezword.eventmap.cores;
 
 import com.google.firebase.database.FirebaseDatabase;
 
-/**
- * Created by chita on 13/05/2018.
- */
-
-public class Firebase {
-    private static final Firebase ourInstance = new Firebase();
+public class FireBase {
+    private static final FireBase ourInstance = new FireBase();
     private static FirebaseDatabase mDatabase = null;
 
-    public static Firebase getInstance() {
+    private FireBase() {
+    }
+
+    public static FireBase getInstance() {
         return ourInstance;
     }
 
@@ -20,7 +19,5 @@ public class Firebase {
             mDatabase.setPersistenceEnabled(true);
         }
         return mDatabase;
-    }
-    private Firebase() {
     }
 }
