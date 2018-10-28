@@ -34,9 +34,10 @@
         <activity
             android:name=".activities.MapsActivity"
             android:label="@string/title_activity_maps">
-            <intent-filter>
+            <intent-filter android:label="Bản đồ">
                 <action android:name="android.intent.action.MAIN" />
-
+                <category android:name="android.intent.category.ALTERNATIVE" />
+                <category android:name="android.intent.category.SELECTED_ALTERNATIVE" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
